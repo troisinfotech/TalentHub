@@ -16,9 +16,56 @@ We don't care about the degrees you have or the college you come from. We care a
 Create a Spring Boot application with below API's
 1. Login API which returns access and refresh JWT tokens
 2. GET API will fetch data from AirTable base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). To insert data use Hibernate. If you do not have Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). For the GET API and API Token needed to make the call refer to [AirTable Documentation](https://airtable.com/api)
-3. GET API which to return user info json. User JDBC Template for select opertation. The returned user json should be like this
+3. GET API which to return user info json. User JDBC Template for select opertation. The returned user json should be like below for user id = 1
 
-
+```
+[
+  {
+    "id": 1,
+    "name": "user1",
+    "roles": [
+      {
+        "id": 1,
+        "name": "role1",
+        "permissions": [
+          {
+            "id": 1,
+            "name": "permission1"
+          },
+          {
+            "id": 2,
+            "name": "permission2"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "role2",
+        "permissions": [
+          {
+            "id": 4,
+            "name": "permission4"
+          },
+          {
+            "id": 6,
+            "name": "permission6"
+          }
+        ]
+      }
+    ],
+    "organizations": [
+      {
+        "id": 1,
+        "name": "org1"
+      },
+      {
+        "id": 2,
+        "name": "org2"
+      }
+    ]
+  }
+]
+```
 
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
