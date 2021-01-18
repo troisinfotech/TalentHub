@@ -14,59 +14,85 @@ We don't care about the degrees you have or the college you come from. We care a
 ## Your Task
 
 Create a Spring Boot application with below API's
-1. Login API which returns access and refresh JWT tokens
-2. GET API will fetch data from AirTable base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). To insert data use Hibernate. If you do not have Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). For the GET API and API Token needed to make the call refer to [AirTable Documentation](https://airtable.com/api)
-3. GET API which to return user info json. User JDBC Template for select opertation. The returned user json should be like below for user id = 1
+1. Login API which returns access and refresh JWT tokens. All the below API should accept access token and if the access token is not valid then below API's should return 401.
+2. GET API will fetch data from a AirTable base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). Use Hibernate to insert data. If you do not have Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). To know more about fetching data from AirTable base refer to [AirTable Documentation](https://airtable.com/api)
+3. GET API which returns user info json. Use JDBC Template for this API. API should return below json for userid = 1
 
 ```
-[
-  {
-    "id": 1,
-    "name": "user1",
-    "roles": [
-      {
-        "id": 1,
-        "name": "role1",
-        "permissions": [
-          {
-            "id": 1,
-            "name": "permission1"
-          },
-          {
-            "id": 2,
-            "name": "permission2"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "role2",
-        "permissions": [
-          {
-            "id": 4,
-            "name": "permission4"
-          },
-          {
-            "id": 6,
-            "name": "permission6"
-          }
-        ]
-      }
-    ],
-    "organizations": [
-      {
-        "id": 1,
-        "name": "org1"
-      },
-      {
-        "id": 2,
-        "name": "org2"
-      }
-    ]
-  }
-]
+{
+  "id": 1,
+  "name": "user1",
+  "roles": [
+    {
+      "id": 1,
+      "name": "role1",
+      "permissions": [
+        {
+          "id": 1,
+          "name": "permission1"
+        },
+        {
+          "id": 2,
+          "name": "permission2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "role2",
+      "permissions": [
+        {
+          "id": 4,
+          "name": "permission4"
+        },
+        {
+          "id": 6,
+          "name": "permission6"
+        }
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "org1"
+    },
+    {
+      "id": 2,
+      "name": "org2"
+    }
+  ]
+}
 ```
-
+and below for userid = 2
+```
+{
+  "id": 2,
+  "name": "user2",
+  "roles": [
+    {
+      "id": 3,
+      "name": "role3",
+      "permissions": [
+        {
+          "id": 3,
+          "name": "permission3"
+        },
+        {
+          "id": 5,
+          "name": "permission5"
+        }
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": 3,
+      "name": "org3"
+    }
+  ]
+}
+```
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
 If we accept the code, we will call you for a technical interview.
@@ -77,11 +103,13 @@ If we accept the code, we will call you for a technical interview.
 3. Use Spring Data JPA + JDBC Template for all select operations
 
 ### Attract our hiring team
-1. Use swagger documentation
-2. Write Unit Test Cases
-3. Clean Code
-4. SOLID Principles
-5. Design Patterns
+1. Use Swagger.
+2. Write Unit Test Cases.
+3. Write Clean Code.
+4. Follow SOLID Principles.
+5. Use Design Patterns wherever possible.
+6. Proper git commit message.
+7. Follow REST Standards.
 
 ## Questions
 If you have any questions or doubts, feel free to get in touch with us at hr@trois.in
