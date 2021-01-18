@@ -1,11 +1,10 @@
 # We Are Hiring
-Trois Infotech is hiring backend engineers and we look at the code first and resumes later. 
-We don't care about the degrees you have or the college you come from. We care about the quality of work you can do.
+Trois Infotech is hiring backend engineers who are passionate about building backend for awesome applications.
 
 ## Instructions
 **Step 1:** Fork [TalentHub Repository](https://github.com/troisinfotech/TalentHub)
  
- **Step 2:** Add your project as a folder in [Hiring folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Backend) 
+ **Step 2:** Add your project as a folder in [Backend folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Backend) 
  
  **Step 3:** Add your code to the folder as per the task given below.
  
