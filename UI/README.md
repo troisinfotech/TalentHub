@@ -40,9 +40,7 @@ If we accept the code, we will call you for a technical interview.
 ### Attract our hiring team
 1. Write Unit Test Cases.
 1. Write Clean Code.
-1. Follow SOLID Principles.
 1. Proper git commit message.
-1. Follow REST Standards.
 
 ## Questions
 If you have any questions or doubts, feel free to get in touch with us at hr@trois.in
