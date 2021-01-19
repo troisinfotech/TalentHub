@@ -37,7 +37,7 @@ If we accept the code, we will call you for a technical interview.
 
 ### Must Have
 1. Knowledge of class components and functional components.
-2. Access token should be called only once. If session expired, use Refresh token to get new access token. DONOT call access token endpoint to get new access token.
+2. Access Token API should be called only once. If access token is expired, then use Refresh Token API to get new access token. **DONOT call Access Token API to get new access token after the current one expires.**.
 
 ### Attract our hiring team
 1. Use Redux, Saga.
