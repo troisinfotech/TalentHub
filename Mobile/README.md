@@ -37,16 +37,17 @@ If we accept the code, we will call you for a technical interview.
 
 ### Must Have
 1. Knowledge of class components and functional components.
-2. Access Token API should be called only once. If access token is expired, then use Refresh Token API to get new access token. **DONOT call Access Token API to get new access token after the current one expires.**.
+1. Access Token API should be called only once. If access token is expired, then use Refresh Token API to get new access token. **DONOT call Access Token API to get new access token after the current one expires.**.
+1. Integrate React Native Debugger for debugging.
 
 ### Attract our hiring team
 1. Use Redux, Saga / Thunk.
-2. NativeBase or ReactNative UI Kitten or ReactNative Elements.
-3. AsyncStorage, Firebase.
-3. Form management using Formik or Redux Forms.
-4. Write Clean Code.
-5. Proper git commit message.
-6. Follow REST Standards.
+1. NativeBase or ReactNative UI Kitten or ReactNative Elements.
+1. AsyncStorage, Firebase.
+1. Form management using Formik or Redux Forms.
+1. Write Clean Code.
+1. Proper git commit message.
+1. Follow REST Standards.
 
 ## Questions
 If you have any questions or doubts, feel free to get in touch with us at hr@trois.in
