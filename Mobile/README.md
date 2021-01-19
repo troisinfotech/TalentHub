@@ -40,7 +40,7 @@ If we accept the code, we will call you for a technical interview.
 2. Access Token API should be called only once. If access token is expired, then use Refresh Token API to get new access token. **DONOT call Access Token API to get new access token after the current one expires.**.
 
 ### Attract our hiring team
-1. Use Redux, Saga.
+1. Use Redux, Saga / Thunk.
 2. NativeBase or ReactNative UI Kitten or ReactNative Elements.
 3. AsyncStorage, Firebase.
 3. Form management using Formik or Redux Forms.
