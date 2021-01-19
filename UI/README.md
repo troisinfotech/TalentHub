@@ -21,18 +21,21 @@ Create a responsive web application with below
    1. From the login screen, get email and password and call Access Token API to get the access token. 
    1. Display proper error message if authorization fails.
 1. After getting access token, the user should be taken to home screen. Store the logged in user's details in redux store.
-1. Perform a CURD and Show Notifications (Success, Failure) based on the response.
-1. Create a Table for showing list of items with server side pagination.
-1. Integrate Logger/Redux Dev Tools For Debugging.
+1. Web App should have a sidebar created using navigation.
+1. Sidebar should have below links
+   1. `Home` : 
+   1. `Survey` : Perform a CURD and Show Notifications (Success, Failure) based on the response.
+   1. `Table` : Create a Table for showing list of items with server side pagination.
+   1. `Logout`
 
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
 If we accept the code, we will call you for a technical interview.
 
 ### Must Have
-1. Responsive Design
-1. Use Material UI
-1. Use Redux, Saga / Thunk, Hooks, Functional Components.
+1. Responsive Design using Material UI (Preferred) or Bootstrap.
+1. Use Redux, Saga / Thunk, Hooks, Functional Components (Preferred) or Class Components.
+1. Integrate Logger/Redux Dev Tools For Debugging.
 
 ### Attract our hiring team
 1. Write Unit Test Cases.
