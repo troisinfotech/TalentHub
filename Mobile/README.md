@@ -21,15 +21,15 @@ Create a React Native mobile application with below
       1. `Refresh Token` : This APi is used to get new access token after the current on expires.
    1. From the login screen, get email and password and call Access Token API to get the access token. 
    1. Display proper error message if authorization fails.
-1. After getting access token, the user should be navigated to home screen.
-   1. Home screen should show user profile information with a welcome message. Home screen should show user profile picture, nickname, email, a tick mark near to email if email is verified.
+1. After getting access token, the user should be taken to home screen.
+   1. Home screen should show user profile information with a welcome message. Home screen should show *profile picture*, *nickname*, *email*, *a tick mark near to email if email is verified*.
 1. App should have a sidebar created using drawer navigation.
 1. Sidebar should have below links
-   1. Home : The user should be able to remain in their home page unless they logout or until the access token is expired.
-   1. Survey : This screen should have a form to get Name, Age, DOB and Mobile Number. When submit button is pressed the user inputs should be validated and saved to local storage. 
-   1. Survey History : This screen should fetch the saved survey details from local storage a show it in a card view. There should be one card per survey. If the user does 10 survey from the Survey sidebar, then survey history screen should show ten cards and each card will have label and data for Name, Age, DOB, Mobile Number.
-   1. Posts : Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array.
-   1. Logout
+   1. `Home` : The user should be able to remain in their home page unless they logout or until the access token is expired.
+   1. `Survey` : This screen should have a form to get *Name*, *Age*, *DOB* and *Mobile Number*. When submit button is pressed the user inputs should be validated and saved to local storage or firebase. 
+   1. `Survey History` : This screen should fetch the saved survey details from local storage a show it in a card view. There should be one card per survey. If the user does 10 survey from the Survey sidebar, then survey history screen should show ten cards and each card will have label and data for *Name*, *Age*, *DOB*, *Mobile Number*.
+   1. `Posts` : Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array.
+   1. `Logout`
    
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
@@ -41,8 +41,8 @@ If we accept the code, we will call you for a technical interview.
 
 ### Attract our hiring team
 1. Use Redux, Saga.
-2. NativeBase or ReactNative UI Kitten or ReactNative Elements
-3. AsyncStorage
+2. NativeBase or ReactNative UI Kitten or ReactNative Elements.
+3. AsyncStorage, Firebase.
 3. Form management using Formik or Redux Forms.
 4. Write Clean Code.
 5. Proper git commit message.
