@@ -11,11 +11,19 @@ Trois Infotech is hiring UI engineers who are passionate about building awesome 
  **Step 4:** Submit a pull request 
 
 ## Your Task
-1. Use Redux, Saga, Hooks, Functional Components
-1. Create a Login Page and store the User info in store and use it for future references.
-1. Perform a CURD and Show Notifications (Success, Failure) based on the response
-1. Create a Table for showing list of items with server side pagination
-1. Integrate Logger/Redux Dev Tools For Debugging
+Create a responsive web application with below
+
+1. Application should have a login screen.
+   1. To begin with, import this [Postman Collection](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. The Postman collection has three API's. 
+      1. `Access Token` : This API is used to get access token, refresh token and id token. Access token is valid for one day.
+      1. `Profile` : This API is used to get logged in user's profile information.
+      1. `Refresh Token` : This APi is used to get new access token after the current on expires.
+   1. From the login screen, get email and password and call Access Token API to get the access token. 
+   1. Display proper error message if authorization fails.
+1. After getting access token, the user should be taken to home screen. Store the logged in user's details in redux store.
+1. Perform a CURD and Show Notifications (Success, Failure) based on the response.
+1. Create a Table for showing list of items with server side pagination.
+1. Integrate Logger/Redux Dev Tools For Debugging.
 
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
