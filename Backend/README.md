@@ -97,9 +97,9 @@ Please make sure that you submit pull request with a working code.
 If we accept the code, we will call you for a technical interview.
 
 ### Must Have
-- [x] Spring Security
-- [x] Use Spring Data JPA with Hibernate or Spring Data JDBC for all insert / update / delete operations
-- [x] Use Spring JDBC + JDBC Template for all select operations. For select operation, writing SQL query with joins / subqueries is a must.
+- [x] Spring Security.
+- [x] Use Spring Data JPA with Hibernate or Spring Data JDBC for all insert / update / delete operations.
+- [x] Use Spring JDBC + JDBC Template to retrieve data. To retrieve data from the in-memory database, writing SQL query with joins / subqueries is a must.
 
 ### Attract our hiring team
 - [ ] Use Swagger.
