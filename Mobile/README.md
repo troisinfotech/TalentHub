@@ -10,7 +10,7 @@ Trois Infotech is hiring mobile engineers who are passionate about building awes
 
 ## Your Task
 
-Create a React Native mobile application with below 
+Create a **React Native** mobile application with below 
 
 1. The app should have a login screen.
    1. To begin with, import this [Postman Collection Link](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. If you are new to Postman, refer to [this](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) to import the collection from a link. The Postman collection has three APIs. 
