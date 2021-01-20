@@ -27,13 +27,13 @@ Create a **React Native** mobile application with below
 1. The App should have a sidebar created using drawer navigation.
 1. The sidebar should have below links
    <br/><br/>
-   1. **`Home`**: Home screen should show user profile information with a welcome message by calling Profile API. The home screen should show the user's *profile picture*, *nickname*, *email*, *a tick mark near to email if the email is verified*. From the home screen, if the user does back navigation, the app should remain on the home page. If the back button is pressed twice app should exit.
+   1. **`Home`**: Home screen should show user profile information with a welcome message by calling Profile API. The home screen should show the user's *profile picture*, *nickname*, *email*, *a tick mark near to email if the email is verified*. 
    <br/><br/>
-   1. **`Survey`**: This screen should have a form to get *Name*, *Age*, *DOB*, and *Mobile Number*. When the submit button is pressed the user inputs should be validated and saved to local storage or firebase. From the survey screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
+   1. **`Survey`**: This screen should have a form to get *Name*, *Age*, *DOB*, and *Mobile Number*. When the submit button is pressed the user inputs should be validated and saved to local storage or firebase. 
    <br/><br/>
-   1. **`Survey History`**: This screen should fetch the saved survey details from local storage and show them in a card view. There should be one card per survey. If the user does 10 surveys from the Survey sidebar, then the survey history screen should show 10 cards and each card will have a label and data for *Name*, *Age*, *DOB*, *Mobile Number*. From the survey history screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
+   1. **`Survey History`**: This screen should fetch the saved survey details from local storage and show them in a card view. There should be one card per survey. If the user does 10 surveys from the Survey sidebar, then the survey history screen should show 10 cards and each card will have a label and data for *Name*, *Age*, *DOB*, *Mobile Number*. 
    <br/><br/>
-   1. **`Posts`**: Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array. From the posts screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
+   1. **`Posts`**: Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array. 
    <br/><br/>
    1. **`Logout`**: Clicking on this link should take the user to the login screen.
    
