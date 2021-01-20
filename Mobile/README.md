@@ -6,9 +6,7 @@ Trois Infotech is hiring mobile engineers who are passionate about building awes
  
  **Step 2:** Add your project as a folder in [Mobile folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Mobile) 
  
- **Step 3:** Add your code to the folder as per the task given below.
- 
- **Step 4:** Submit a pull request 
+ **Step 3:** Submit a pull request 
 
 ## Your Task
 
