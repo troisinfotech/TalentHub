@@ -4,18 +4,16 @@ Trois Infotech is hiring backend engineers who are passionate about building bac
 ## Instructions
 **Step 1:** Fork [TalentHub Repository](https://github.com/troisinfotech/TalentHub)
  
- **Step 2:** Add your project as a folder in [Backend folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Backend) 
+ **Step 2:** Add your project as a folder in [Backend folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Backend). The folder name should be your git username.
  
- **Step 3:** Add your code to the folder as per the task given below.
- 
- **Step 4:** Submit a pull request 
+ **Step 3:** Submit a pull request 
 
 ## Your Task
 
-Create a Spring Boot application with below API's
+Create a **Spring Boot** application with below API's
 1. Login API which returns access and refresh JWT tokens. All the below API should accept access token and if the access token is not valid then below API's should return 401.
 2. GET API will fetch data from a AirTable base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). Use Hibernate to insert data. If you do not have Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). To know more about fetching data from AirTable base refer to [AirTable Documentation](https://airtable.com/api)
-3. GET API which returns user info json. Use JDBC Template for this API. API should return below json for userid = 1
+3. GET API which returns user info json. Use JDBC Template for this API. The user json should look like below userid = 1 (DO NOT hardcode the json, use sql select statement with joins to get the resultset. From the resultset form the below JSON)
 
 ```
 {
