@@ -15,21 +15,20 @@ Trois Infotech is hiring mobile engineers who are passionate about building awes
 Create a React Native mobile application with below 
 
 1. App should have a login screen.
-   1. To begin with, import this [Postman Collection](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. If you are new to Postman and refer [this](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) to import collection from link. The Postman collection has three API's. 
+   1. To begin with, import this [Postman Collection Link](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. If you are new to Postman, refer [this](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) to import the collection from link. The Postman collection has three API's. 
       1. `Access Token` : This API is used to get access token, refresh token and id token. Access token is valid for one day.
       1. `Profile` : This API is used to get logged in user's profile information.
-      1. `Refresh Token` : This APi is used to get new access token after the current on expires.
-   1. From the login screen, get email and password and call Access Token API to get the access token. 
+      1. `Refresh Token` : This API is used to get new access token after the current one expires.
+   1. From the login screen, get email and password from user and call Access Token API to get the access token. 
    1. Display proper error message if authorization fails.
 1. After getting access token, the user should be taken to home screen.
-   1. Home screen should show user profile information with a welcome message. Home screen should show *profile picture*, *nickname*, *email*, *a tick mark near to email if email is verified*.
 1. App should have a sidebar created using drawer navigation.
 1. Sidebar should have below links
-   1. `Home` : The user should be able to remain in their home page unless they logout or until the access token is expired.
-   1. `Survey` : This screen should have a form to get *Name*, *Age*, *DOB* and *Mobile Number*. When submit button is pressed the user inputs should be validated and saved to local storage or firebase. 
-   1. `Survey History` : This screen should fetch the saved survey details from local storage a show it in a card view. There should be one card per survey. If the user does 10 survey from the Survey sidebar, then survey history screen should show ten cards and each card will have label and data for *Name*, *Age*, *DOB*, *Mobile Number*.
-   1. `Posts` : Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array.
-   1. `Logout`
+   1. `Home` : Home screen should show user profile information with a welcome message by calling Profile API. Home screen should show *profile picture*, *nickname*, *email*, *a tick mark near to email if email is verified*. From the home screen if the user does a back navigation, app should remain in home page. If back button is pressed twice app should exit.
+   1. `Survey` : This screen should have a form to get *Name*, *Age*, *DOB* and *Mobile Number*. When submit button is pressed the user inputs should be validated and saved to local storage or firebase. From the survey screen if the user does a back navigation, app should take to home page. If back button is pressed twice app should exit.
+   1. `Survey History` : This screen should fetch the saved survey details from local storage a show it in a card view. There should be one card per survey. If the user does 10 survey from the Survey sidebar, then survey history screen should show ten cards and each card will have label and data for *Name*, *Age*, *DOB*, *Mobile Number*. From the survey history screen if the user does a back navigation, app should take to home page. If back button is pressed twice app should exit.
+   1. `Posts` : Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array. From the posts screen if the user does a back navigation, app should take to home page. If back button is pressed twice app should exit.
+   1. `Logout` : Clicking on this link should take to login screen.
    
 ### Pull Request
 Please make sure that you submit pull request with a working code. 
