@@ -15,7 +15,7 @@ Trois Infotech is hiring mobile engineers who are passionate about building awes
 Create a React Native mobile application with below 
 
 1. App should have a login screen.
-   1. To begin with, import this [Postman Collection](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. The Postman collection has three API's. 
+   1. To begin with, import this [Postman Collection](https://www.getpostman.com/collections/31fa78252ece7e079f94) into your local postman installation. If you are new to Postman and refer [this](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) to import collection from link. The Postman collection has three API's. 
       1. `Access Token` : This API is used to get access token, refresh token and id token. Access token is valid for one day.
       1. `Profile` : This API is used to get logged in user's profile information.
       1. `Refresh Token` : This APi is used to get new access token after the current on expires.
