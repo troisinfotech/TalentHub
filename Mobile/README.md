@@ -19,7 +19,7 @@ Create a React Native mobile application with below
       1. `Access Token`: This API is used to get an access token, a refresh token, and an id token. The access token is valid for one day.
       1. `Profile`: This API is used to get logged-in user's profile information.
       1. `Refresh Token`: This API is used to get a new access token after the current one expires.
-   1. From the login screen, get an email and password from the user and call Access Token API to get the access token. 
+   1. From the login screen, get an email and password from the user and call Access Token API to get the access token. Use the same username and password provided in the Access Token API's request body.
    1. Display proper error message if authorization fails.
 1. After getting the access token, the user should be taken to the home screen.
 1. The App should have a sidebar created using drawer navigation.
