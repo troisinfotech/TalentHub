@@ -23,7 +23,6 @@ Create a responsive **React** web application with below
    1. From the login screen, get an email and password from the user and call Access Token API to get the access token. Use the same username and password provided in the Access Token API's request body.
    1. Display proper error message if authorization fails.
 1. After getting access token, the user should be taken to home screen. Store the logged in user's details in redux store.
-1. Clicking broswer back button from home screen should not take to login screen if user is already logged in.
 1. Web App should have a sidebar created using navigation.
 1. Sidebar should have below links
    1. `Home` : 
