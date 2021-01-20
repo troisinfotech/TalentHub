@@ -4,7 +4,7 @@ Trois Infotech is hiring mobile engineers who are passionate about building awes
 ## Instructions
 **Step 1:** Fork [TalentHub Repository](https://github.com/troisinfotech/TalentHub)
  
- **Step 2:** Add your project as a folder in [Mobile folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Mobile) 
+ **Step 2:** Add your project as a folder in [Mobile folder of this repository](https://github.com/troisinfotech/TalentHub/tree/master/Mobile). The folder name should be your git username.
  
  **Step 3:** Submit a pull request 
 
@@ -31,7 +31,7 @@ Create a React Native mobile application with below
    <br/><br/>
    1. **`Survey`**: This screen should have a form to get *Name*, *Age*, *DOB*, and *Mobile Number*. When the submit button is pressed the user inputs should be validated and saved to local storage or firebase. From the survey screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
    <br/><br/>
-   1. **`Survey History`**: This screen should fetch the saved survey details from local storage a show them in a card view. There should be one card per survey. If the user does 10 surveys from the Survey sidebar, then the survey history screen should show 10 cards and each card will have a label and data for *Name*, *Age*, *DOB*, *Mobile Number*. From the survey history screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
+   1. **`Survey History`**: This screen should fetch the saved survey details from local storage and show them in a card view. There should be one card per survey. If the user does 10 surveys from the Survey sidebar, then the survey history screen should show 10 cards and each card will have a label and data for *Name*, *Age*, *DOB*, *Mobile Number*. From the survey history screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
    <br/><br/>
    1. **`Posts`**: Create a scrollable flat list with one card per object of this [JSON source](https://mockend.com/troisinfotech/TalentHub/posts). Make a GET API Call to the JSON source and draw one card per object from the JSON Array. From the posts screen, if the user does back navigation, the app should go to the home page. If the back button is pressed twice app should exit.
    <br/><br/>
