@@ -1,5 +1,5 @@
 # We Are Hiring
-Trois Infotech is hiring backend engineers who are passionate about building backend for awesome applications.
+Trois Infotech is hiring backend engineers who are passionate about building awesome backend applications.
 
 ## Instructions
 **Step 1:** Fork [TalentHub Repository](https://github.com/troisinfotech/TalentHub)
@@ -10,10 +10,12 @@ Trois Infotech is hiring backend engineers who are passionate about building bac
 
 ## Your Task
 
-Create a **Spring Boot** application with below API's using Java or Kotlin
-1. Login API which returns access and refresh JWT tokens. All the below API should accept access token and if the access token is not valid then below API's should return 401.
-2. GET API will fetch data from a AirTable base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). Use Hibernate to insert data. If you do not have Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). To know more about fetching data from AirTable base refer to [AirTable Documentation](https://airtable.com/api)
-3. GET API which returns user info json. Use JDBC Template for this API. The user json should look like below userid = 1 (DO NOT hardcode the json, use sql select statement with joins to get the resultset. From the resultset form the below JSON)
+Create a **Spring Boot** application with the below APIs using Java or Kotlin
+1. Login API which returns access and refresh JWT tokens. All the below APIs should accept access token as Authorization header with Bearer type and if the access token is not valid then the below APIs should return 401.
+<br/><br/>
+1. GET API will fetch data from an **AirTable** base named [User Info](https://airtable.com/shr1ODP9VptJACdyH) and create POST/PUT API to insert into respective tables of an in-memory database such as [H2](http://www.h2database.com/html/main.html), [Apache Derby](https://db.apache.org/derby/) or [HSQLDB](http://hsqldb.org/). Use **Spring Data JPA with Hibernate or Spring Data JDBC** to insert data. If you do not have an Airtable account then please use this [invite link to sign in](https://airtable.com/invite/r/FxjRTkQG). To know more about fetching data from AirTable base refer to [AirTable Documentation](https://airtable.com/api)
+<br/><br/>
+1. GET API which returns user info JSON. Use **JDBC Template with Spring JDBC** for this API. The user JSON should look like below for userid = 1. **DO NOT hardcode the below JSON, using JDBC template execute SQL select statement with joins / subqueries to get the resultset. From the resultset form the below JSON**.
 
 ```
 {
@@ -95,18 +97,18 @@ Please make sure that you submit pull request with a working code.
 If we accept the code, we will call you for a technical interview.
 
 ### Must Have
-1. Spring Security
-2. Use Hibernate for all insert / update / delete operations
-3. Use Spring Data JPA + JDBC Template for all select operations
+- [x] Spring Security
+- [x] Use Spring Data JPA with Hibernate or Spring Data JDBC for all insert / update / delete operations
+- [x] Use Spring JDBC + JDBC Template for all select operations. For select operation, writing SQL query with joins / subqueries is a must.
 
 ### Attract our hiring team
-1. Use Swagger.
-2. Write Unit Test Cases.
-3. Write Clean Code.
-4. Follow SOLID Principles.
-5. Use Design Patterns wherever possible.
-6. Proper git commit message.
-7. Follow REST Standards.
+- [ ] Use Swagger.
+- [ ] Write Unit Test Cases.
+- [ ] Write Clean Code.
+- [ ] Follow SOLID Principles.
+- [ ] Use Design Patterns wherever possible.
+- [ ] Proper git commit message.
+- [ ] Follow REST Standards.
 
 ## Questions
 If you have any questions or doubts, feel free to get in touch with us at hr@trois.in
