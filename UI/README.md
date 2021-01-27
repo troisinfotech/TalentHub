@@ -36,10 +36,11 @@ If we accept the code, we will call you for a technical interview.
 
 ### Must Have
 1. Responsive Design using Material UI (Preferred) or Bootstrap.
-1. Use Redux, Saga / Thunk, Hooks, Functional Components (Preferred) or Class Components.
+1. Use Redux, Hooks, Functional Components (Preferred) or Class Components.
 1. Integrate Logger/Redux Dev Tools For Debugging.
 
 ### Attract our hiring team
+1. Use Saga / Thunk middleware.
 1. Write Unit Test Cases.
 1. Write Clean Code.
 1. Proper git commit message.
