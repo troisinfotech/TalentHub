@@ -27,7 +27,7 @@ Create a responsive **React** web application with below
 1. Sidebar should have below links
    1. `Home` : 
    1. `Survey` : Perform a CRUD and Show Notifications (Success, Failure) based on the response.
-   1. `Table` : Create a Table for showing list of items with server side pagination. Make a GET API call to this endpoint which accepts limit and offset query params.
+   1. `Table` : Create a Table for showing list of items with server side pagination. Make a GET API call to [this](https://mockend.com/troisinfotech/TalentHub/posts) endpoint which accepts limit and offset query params. You can assume, the total number of rows is 100. And to get 10 rows from 20 to 30, use this https://mockend.com/troisinfotech/TalentHub/posts?limit=10&offset=20. 
    1. `Logout`
 
 ### Pull Request
