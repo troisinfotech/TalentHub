@@ -22,7 +22,8 @@ export const surveyReducer =(state=[],action)=>{
             const {id,data}=action
             var temp = state
             temp[id-1]={
-                ...data
+                
+                ...data,id
             }
             return [
                ...temp

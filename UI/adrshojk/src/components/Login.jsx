@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -7,9 +7,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
-
-
+import { connect, useDispatch } from 'react-redux'
+import { loginAction } from '../redux/actions/userActions';
+import { useHistory } from 'react-router-dom';
+import * as userService from '../sevices/userService'
 const useStyles = makeStyles((theme) => ({
     login: {
         marginTop: theme.spacing(8),
@@ -32,37 +33,37 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const Login = () => {
+const Login = (props) => {
+    const dispatch = useDispatch()
     const classes = useStyles();
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const history = useHistory()
 
     const loginClick = (e) => {
         e.preventDefault()
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-        myHeaders.append("Cookie", "__cfduid=d971289341792afd825519421ec8d21fa1612020327; did=s%3Av0%3A61841f00-630f-11eb-8c60-3b211d1521a1.mEPCAzyWavnEJRNcRKbfAG4oqQYFN4MzLS7CM6wuidY; did_compat=s%3Av0%3A61841f00-630f-11eb-8c60-3b211d1521a1.mEPCAzyWavnEJRNcRKbfAG4oqQYFN4MzLS7CM6wuidY");
+        if (email === '' || password === '') {
+            alert('fill the credentials')
+            return
+        }     
+        var raw = JSON.stringify({ "username": email, "password": password });
+        userService.logUser(raw).then(res=>{
+          console.log({res});
+          if(res.status==='success'){
+              const userInfo=JSON.parse(res.userInfo)
+              dispatch(loginAction(userInfo))
+              history.push('/profile')
+          }else{
 
-        var urlencoded = new URLSearchParams();
-        urlencoded.append("grant_type", "password");
-        urlencoded.append("client_id", "nliCaBuoAAurkdwnWeD9oQGQrfa81tj4");
-        urlencoded.append("audience", "https://hiring.trois.in/api/v2/");
-        urlencoded.append("username", "challenge@trois.in");
-        urlencoded.append("password", "Challenge123");
-        urlencoded.append("scope", "openid offline_access");
-        urlencoded.append("client_secret", "kKuOiuszjs2fOjGGH0RBskBAYA5n1j0rgxOcUdsUPex97DBISvDzCxu4NVClVnWu");
+              alert(res.message)
+          }
+        }).catch(err=>{
+            alert(err.message)
+        })
 
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: urlencoded,
-            redirect: 'follow',
-            mode:'no-cors',
-            credentials:'omit'
-        };
+        
 
-        fetch("https://trois.us.auth0.com/oauth/token", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+
     }
 
 
@@ -77,8 +78,8 @@ export const Login = () => {
                 <Typography component="h1" variant="h5">
                     Login
         </Typography>
-                        
-                <form className={classes.form} onSubmit={(e)=>loginClick(e)} noValidate >
+
+                <form className={classes.form} onSubmit={(e) => loginClick(e)} noValidate >
                     <TextField
                         variant="outlined"
                         margin="normal"
@@ -89,6 +90,7 @@ export const Login = () => {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                     <TextField
                         variant="outlined"
@@ -100,6 +102,7 @@ export const Login = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                     <Button
                         type="submit"
@@ -117,3 +120,10 @@ export const Login = () => {
         </Container>
     );
 }
+const mapStateToProps = (state) => {
+    return {
+        data: state.userInfo
+    }
+}
+
+export default connect(mapStateToProps)(Login);

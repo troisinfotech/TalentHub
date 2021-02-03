@@ -1,7 +1,8 @@
+import {LOG_USER,LOGOUT_USER} from '../../config/actionTypes'
 export const loginAction = (userInfo)=>({
-    type:'LOGIN',
+    type:LOG_USER,
     payload:userInfo,
 })
 export const logoutAction = ()=>({
-    type:'LOGOUT',
+    type:LOGOUT_USER,
 })

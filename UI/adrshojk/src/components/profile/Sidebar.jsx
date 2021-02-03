@@ -12,12 +12,20 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import TableChartIcon from '@material-ui/icons/TableChart';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Survey from './Survey';
-import Home from './Home'
-import { Table } from '@material-ui/core';
+import Profile from './Profile';
+import { useDispatch,connect } from 'react-redux';
+import { logoutAction } from '../../redux/actions/userActions';
+import { useHistory } from 'react-router-dom';
+import TableView from './TableView';
+import { Avatar } from '@material-ui/core';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -51,39 +59,59 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         padding: theme.spacing(3),
     },
+    avatar:{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'space-between',
+        marginLeft: 'auto',
+        float:'left'
+    }
 }));
 
 function Sidebar(props) {
-    const { window } = props;
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const { window ,userInfo} = props;
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
+
 
     const [selectedTab, setTab] = useState('survey')
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    const logout = () => {
+        dispatch(logoutAction());
+        history.push('/')
+    }
 
     const drawer = (
         <div>
             <div className={classes.toolbar} />
             <List>
                 <Divider />
-                <ListItem button key={Home} onClick={() => setTab('home')} >
+                <ListItem button key='Home' onClick={() => setTab('home')} >
                     <ListItemIcon><HomeIcon /></ListItemIcon>
                     <ListItemText primary='Home' />
                 </ListItem>
                 <Divider />
-                <ListItem button key={Survey} onClick={() => setTab('survey')} >
-                    <ListItemIcon><HomeIcon /></ListItemIcon>
+                <ListItem button key={'Survey'} onClick={() => setTab('survey')} >
+                    <ListItemIcon><AssignmentIcon /></ListItemIcon>
                     <ListItemText primary='Survey' />
                 </ListItem>
                 <Divider />
-                <ListItem button key={Table} onClick={() => setTab('table')} >
-                    <ListItemIcon><HomeIcon /></ListItemIcon>
+                <ListItem button key={'Table'} onClick={() => setTab('table')} >
+                    <ListItemIcon><TableChartIcon /></ListItemIcon>
                     <ListItemText primary='Table' />
                 </ListItem>
+                <ListItem button key='logout' onClick={() => logout()}>
+
+                    <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+                    <ListItemText primary='Logout' />
+                </ListItem>
+
                 <Divider />
 
             </List>
@@ -92,6 +120,8 @@ function Sidebar(props) {
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
+
+
 
     return (
         <div className={classes.root}>
@@ -110,6 +140,13 @@ function Sidebar(props) {
                     <Typography variant="h6" noWrap>
                         Trois Challenge
           </Typography>
+            <div className={classes.avatar}>
+                    <Typography variant="h7" noWrap>
+{userInfo.userInfo.nickname}
+          </Typography>
+
+                <Avatar src={userInfo.userInfo.picture} />
+            </div>
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="sidebar tabs">
@@ -145,8 +182,9 @@ function Sidebar(props) {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                 <div className={classes.mainSection}>
-                    {selectedTab === 'home' && <Home />}
+                    {selectedTab === 'home' && <Profile />}
                     {selectedTab === 'survey' && <Survey />}
+                    {selectedTab === 'table' && <TableView />}
                 </div>
             </main>
         </div>
@@ -157,5 +195,9 @@ Sidebar.propTypes = {
 
     window: PropTypes.func,
 };
-
-export default Sidebar;
+const mapToProps =(state)=>{
+return{
+    userInfo:state.userInfo
+}
+}
+export default connect(mapToProps)(Sidebar);

@@ -1,10 +1,15 @@
+import { Chip } from '@material-ui/core'
 import React from 'react'
-
 const Footer = () => {
     return (
-        <div>
-            designed by adrshojk
-        </div>
+        <footer>
+            <Chip label="Designed by adrshojk"
+            color='primary'
+            
+            
+            />
+        </footer>
+            
     )
 }
 

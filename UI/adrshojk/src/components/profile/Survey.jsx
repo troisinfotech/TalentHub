@@ -35,17 +35,17 @@ const Survey = (props) => {
         description: '',
     })
     const [surveyData, setSurveyData] = useState([])
-    const [notification,setNotification]=useState({
-        open:false,
-        message:''
+    const [notification, setNotification] = useState({
+        open: false,
+        message: ''
     })
     const handleSubmit = (e) => {
         e.preventDefault()
         const { place, description } = userInput
-       let valid=((place ==='')||(description ===''))?false:true
-            
-          
-       
+        let valid = ((place === '') || (description === '')) ? false : true
+
+
+
         if (valid) {
             const data = {
                 id: surveyData.length + 1,
@@ -55,7 +55,7 @@ const Survey = (props) => {
 
             addData(data)
             if (userInput.id) {
-                dispatch(updateAction(data,userInput.id))
+                dispatch(updateAction(data, userInput.id))
             } else {
 
                 dispatch(addAction(data))
@@ -67,13 +67,13 @@ const Survey = (props) => {
                 descriptionErr: ''
             })
             setNotification({
-                open:true,
-                message:"submitted successfully"
+                open: true,
+                message: "submitted successfully"
             })
-        }else{
+        } else {
             setNotification({
-                open:true,
-                message:"failed : empty fields"
+                open: true,
+                message: "failed : empty fields"
             })
         }
     }
@@ -100,13 +100,13 @@ const Survey = (props) => {
 
     }
 
-    const handleClose =(e,reason)=>{
-        if(reason==='clickaway'){
+    const handleClose = (e, reason) => {
+        if (reason === 'clickaway') {
             return
         }
         setNotification({
-            open:false,
-            message:''
+            open: false,
+            message: ''
         })
     }
 
@@ -147,25 +147,23 @@ const Survey = (props) => {
 
                 <Button
                     type="submit"
-                    maxcontent
                     variant="contained"
                     color="primary"
                     defaultValue="Default Value"
 
-                // className={}
                 >
                     submit
           </Button>
-          <Snackbar open={notification.open} 
-          autoHideDuration={2000}
-          message={notification.message}
-          onClose={handleClose}
-          />
-          
-              
+                <Snackbar open={notification.open}
+                    autoHideDuration={2000}
+                    message={notification.message}
+                    onClose={handleClose}
+                />
+
+
             </form>
             <br />
-            <SurveyView value={{handleUpdate,setNotification}}  />
+            <SurveyView value={{ handleUpdate, setNotification }} />
         </div>
     )
 }
