@@ -1,0 +1,7 @@
+com/trois/talenthubbackend/talentHub/TalentHubApplication.class
+com/trois/talenthubbackend/talentHub/controller/AirTableFetchController.class
+com/trois/talenthubbackend/talentHub/dto/PermissionDTO.class
+com/trois/talenthubbackend/talentHub/dto/UserDTO.class
+com/trois/talenthubbackend/talentHub/service/AirtableFetchService.class
+com/trois/talenthubbackend/talentHub/dto/RoleDTO.class
+com/trois/talenthubbackend/talentHub/dto/OrganizationDTO.class
