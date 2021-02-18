@@ -1,12 +1,16 @@
-package com.trois.talenthubbackend.talentHub.dto;
+package com.trois.talenthubbackend.talentHub.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import com.google.gson.annotations.SerializedName;
-
-public class RoleDTO {
+@Entity
+public class Role {
 	@SerializedName("userid")
 	private int userId;
 	@SerializedName("rolename")
 	private String roleName;
+	@Id
 	@SerializedName("roleid")
 	private int roleId;
 

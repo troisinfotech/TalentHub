@@ -10,10 +10,10 @@ import com.sybit.airtable.Base;
 import com.sybit.airtable.Sort;
 import com.sybit.airtable.Table;
 import com.sybit.airtable.exception.AirtableException;
-import com.trois.talenthubbackend.talentHub.dto.OrganizationDTO;
-import com.trois.talenthubbackend.talentHub.dto.PermissionDTO;
-import com.trois.talenthubbackend.talentHub.dto.RoleDTO;
-import com.trois.talenthubbackend.talentHub.dto.UserDTO;
+import com.trois.talenthubbackend.talentHub.model.Organization;
+import com.trois.talenthubbackend.talentHub.model.Permission;
+import com.trois.talenthubbackend.talentHub.model.Role;
+import com.trois.talenthubbackend.talentHub.model.User;
 
 @Service
 public class AirtableFetchService {
@@ -25,23 +25,23 @@ public class AirtableFetchService {
 		base = airtable.base("appAmGo6C2Oj3S22k");
 	}
 
-	public List<UserDTO> findAllUsers() throws HttpResponseException, AirtableException {
-		Table<UserDTO> userTable = base.table("user", UserDTO.class);
+	public List<User> findAllUsers() throws HttpResponseException, AirtableException {
+		Table<User> userTable = base.table("user", User.class);
 		return userTable.select(new Sort("userid"));
 	}
 
-	public List<RoleDTO> findAllRoles() throws HttpResponseException, AirtableException {
-		Table<RoleDTO> roleTable = base.table("role", RoleDTO.class);
+	public List<Role> findAllRoles() throws HttpResponseException, AirtableException {
+		Table<Role> roleTable = base.table("role", Role.class);
 		return roleTable.select(new Sort("roleid"));
 	}
 
-	public List<PermissionDTO> findAllPermissions() throws HttpResponseException, AirtableException {
-		Table<PermissionDTO> permissionTable = base.table("permission", PermissionDTO.class);
+	public List<Permission> findAllPermissions() throws HttpResponseException, AirtableException {
+		Table<Permission> permissionTable = base.table("permission", Permission.class);
 		return permissionTable.select(new Sort("permissionid"));
 	}
 
-	public List<OrganizationDTO> findAllOrganizations() throws HttpResponseException, AirtableException {
-		Table<OrganizationDTO> organizationTable = base.table("organization", OrganizationDTO.class);
+	public List<Organization> findAllOrganizations() throws HttpResponseException, AirtableException {
+		Table<Organization> organizationTable = base.table("organization", Organization.class);
 		return organizationTable.select(new Sort("organizationid"));
 	}
 
