@@ -12,7 +12,7 @@ public class Organization {
 	@SerializedName("organizationname")
 	private String organizationName;
 	@SerializedName("userid")
-	private int userId;
+	private int orgUserId;
 
 	public int getOrganizationId() {
 		return organizationId;
@@ -31,11 +31,11 @@ public class Organization {
 	}
 
 	public int getUserId() {
-		return userId;
+		return orgUserId;
 	}
 
 	public void setUserId(int userId) {
-		this.userId = userId;
+		this.orgUserId = userId;
 	}
 
 }

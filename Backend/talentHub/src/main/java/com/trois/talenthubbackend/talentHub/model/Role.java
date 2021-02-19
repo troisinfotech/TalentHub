@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 @Entity
 public class Role {
 	@SerializedName("userid")
-	private int userId;
+	private int rrUserId;
 	@SerializedName("rolename")
 	private String roleName;
 	@Id
@@ -15,11 +15,11 @@ public class Role {
 	private int roleId;
 
 	public int getUserId() {
-		return userId;
+		return rrUserId;
 	}
 
 	public void setUserId(int userId) {
-		this.userId = userId;
+		this.rrUserId = userId;
 	}
 
 	public String getRoleName() {
