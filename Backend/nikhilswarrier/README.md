@@ -1,7 +1,7 @@
-#Talenthub Backend Machine task
+# Talenthub Backend Machine task
 
-###First you will need the following basic pieces of information:
-
+### First you will need the following basic pieces of information:
+ * Define OS environment variable AIRTABLE_API_KEY to fetch data from airtable.
  * ClientId: nliCaBuoAAurkdwnWeD9oQGQrfa81tj4
  * ClientSecret:kKuOiuszjs2fOjGGH0RBskBAYA5n1j0rgxOcUdsUPex97DBISvDzCxu4NVClVnWu
  * UserName and Password: challenge@trois.in and Challenge123
@@ -11,7 +11,7 @@
 `$ curl {ClientId}:{ClientSecret}@localhost:8080/oauth/token -d grant_type=password -d username={UserName} -d password={Password}`<br/>
 You'll receive a response similar to below
 `{
-   "access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTQwMDQ1NzUsInVzZXJfbmFtZSI6ImNoYWxsZW5nZUB0cm9pcy5pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiODFjZGYyMWItMDRjYS00NjA2LTk4NzQtOWViOTA5OTU3MzcxIiwiY2xpZW50X2lkIjoibmxpQ2FCdW9BQXVya2R3bldlRDlvUUdRcmZhODF0ajQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.GJj-OpNGeXxoIYw4-gKkSb_lqWW8Qv6K6ealOt4Xbzo",
+  "access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTQwMDQ1NzUsInVzZXJfbmFtZSI6ImNoYWxsZW5nZUB0cm9pcy5pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiODFjZGYyMWItMDRjYS00NjA2LTk4NzQtOWViOTA5OTU3MzcxIiwiY2xpZW50X2lkIjoibmxpQ2FCdW9BQXVya2R3bldlRDlvUUdRcmZhODF0ajQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.GJj-OpNGeXxoIYw4-gKkSb_lqWW8Qv6K6ealOt4Xbzo",
    "token_type":"bearer",
    "expires_in":599,
    "scope":"read write",
