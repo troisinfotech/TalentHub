@@ -29,7 +29,7 @@ Create a **React Native** mobile application with below
    <br/><br/>
    1. **`Home`**: Home screen should show user profile information with a welcome message by calling Profile API. The home screen should show the user's *profile picture*, *nickname*, *email*, *a tick mark near to email if the email is verified*. 
    <br/><br/>
-   1. **`Survey`**: This screen should have a form to get *Name*, *Age*, *DOB*, and *Mobile Number*. When the submit button is pressed the user inputs should be validated and saved to local storage or firebase. 
+   1. **`Survey`**: This screen should have a form to get *Name*, *Age*, *DOB*, and *Mobile Number*. When the submit button is pressed the user inputs should be validated and saved to local database. 
    <br/><br/>
    1. **`Survey History`**: This screen should fetch the saved survey details from local storage and show them in a card view. There should be one card per survey. If the user does 10 surveys from the Survey sidebar, then the survey history screen should show 10 cards and each card will have a label and data for *Name*, *Age*, *DOB*, *Mobile Number*. 
    <br/><br/>
@@ -47,10 +47,10 @@ If we accept the code, we will call you for a technical interview.
 - [x] Integrate React Native Debugger for debugging.
 
 ### Attract our hiring team
-- [ ] Use Redux, Saga / Thunk.
-- [ ] NativeBase or ReactNative UI Kitten or ReactNative Elements.
-- [ ] AsyncStorage, Firebase.
-- [ ] Form management using Formik or Redux Forms.
+- [ ] Use Redux, Saga.
+- [ ] ReactNative UI Kitten.
+- [ ] Realm - by MongoDB.
+- [ ] Form management using Formik.
 - [ ] Write Clean Code.
 - [ ] Proper git commit message.
 
