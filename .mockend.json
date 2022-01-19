@@ -1,12 +1,25 @@
 {
   "Post": {
-    "title": { "string": {} },
+    "title": {
+      "string": {}
+    },
+    "views": {
+      "int": {}
+    },
+    "published": {
+      "boolean": {}
+    },
+    "createdAt": {
+      "date": {}
+    },
     "comments": {
       "hasMany": "Comment"
     }
   },
   "Comment": {
-    "body": { "string": {} },
+    "body": {
+      "string": {}
+    },
     "post": {
       "belongsTo": "Post"
     }
