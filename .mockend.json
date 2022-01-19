@@ -1,6 +1,9 @@
 {
   "Post": {
     "title": { "string": {} },
+    "views": { "int": {} },
+    "published": { "boolean": {} },
+    "createdAt": { "date": {} },
     "comments": {
       "hasMany": "Comment"
     }
